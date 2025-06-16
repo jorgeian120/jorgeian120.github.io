@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ian's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -16,15 +17,19 @@
     </ul>
   </nav>
 
-  <header>
-    <img src="images/ian.png" alt="Ian's photo" class="profile-pic" />
-    <h1>Ian's Developer Portfolio</h1>
-    <p>Python Developer | HTML Enthusiast | IT Professional</p>
+  <header class="landing">
+    <div class="intro fade-in">
+      <img src="images/ian.png" alt="Ian's photo" class="profile-pic" />
+      <h1>Ian's Developer Portfolio</h1>
+      <p class="fade-in delay-1">Python Developer | HTML Enthusiast | IT Professional</p>
+    </div>
   </header>
-  <section>
+
+  <section class="about">
     <h2>About Me</h2>
     <p>
-      I am a Python developer with a passion for creating efficient and user-friendly applications. My background in IT and my experience with HTML allow me to build robust solutions that meet user needs.
+      I am a Python developer with a passion for creating efficient and user-friendly applications.
+      My background in IT and experience with HTML allow me to build robust solutions that meet user needs.
     </p>
   </section>
 
@@ -34,10 +39,10 @@
     <div class="project">
       <h3>Email-to-Sticky Notes Tool</h3>
       <p>Python app that converts Outlook emails into desktop sticky notes. Built for internal workflow optimization.</p>
-      <a href="https://github.com/YOUR_USERNAME/email-sticky-notes">View on GitHub</a>
+      <a href="https://github.com/jorgeian120/email-sticky-notes" target="_blank">View on GitHub</a><br>
       <img src="images/sticky-note.png" alt="To-Do Sticky Note">
     </div>
-    
+
     <div class="project">
       <h3>Education App for Kenya</h3>
       <p>Concept for an app supporting education access and quality in rural Kenya.</p>
@@ -45,9 +50,9 @@
   </section>
 
   <footer>
-    <p>Connect with me:
-      <a href="https://github.com/jorgeian120">GitHub</a> |
-      <a href="jorgeian120@gmail.com">Email</a>
+    <p>Connect with me: 
+      <a href="https://github.com/jorgeian120" target="_blank">GitHub</a> | 
+      <a href="mailto:jorgeian120@gmail.com">Email</a>
     </p>
   </footer>
 
