@@ -2,9 +2,35 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
+}
+
+nav {
+  background-color: #0a192f;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 header {
@@ -12,6 +38,15 @@ header {
   color: white;
   padding: 2rem;
   text-align: center;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 1rem;
 }
 
 .projects {
@@ -26,21 +61,21 @@ header {
   border-radius: 10px;
 }
 
-.project h3 {
-  margin-top: 0;
-}
-
-.project a {
-  color: #007acc;
-  text-decoration: none;
-}
-
 footer {
   background-color: #0a192f;
   color: white;
   text-align: center;
   padding: 1rem;
 }
-.project a:hover {
+footer a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+footer a:hover {
   text-decoration: underline;
 }
+
+footer p {
+  margin: 0;
+} 
