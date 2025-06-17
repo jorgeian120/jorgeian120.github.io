@@ -40,13 +40,17 @@ nav a:hover {
   color: #64ffda;
 }
 
-/* Sections */
 section {
   padding: 4rem 1.5rem;
   max-width: 900px;
   margin: auto;
-  text-align: center;
+  text-align: center; /* KEEP THIS for section titles */
 }
+
+section > *:not(h2):not(h3) {
+  text-align: left; /* This aligns only paragraph/text content, not headers */
+}
+
 
 /* Home / Landing */
 .landing {
