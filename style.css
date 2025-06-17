@@ -40,21 +40,28 @@ nav a:hover {
   color: #64ffda;
 }
 
+/* Sections */
 section {
   padding: 4rem 1.5rem;
   max-width: 900px;
   margin: auto;
-  text-align: center; /* KEEP THIS for section titles */
 }
 
-section > *:not(h2):not(h3) {
-  text-align: left; /* This aligns only paragraph/text content, not headers */
+section h2,
+section h3 {
+  text-align: center;
 }
 
+section p,
+section ul,
+section li {
+  text-align: left;
+}
 
 /* Home / Landing */
 .landing {
   background: linear-gradient(to bottom right, #e0f7ff, #f8ffff);
+  text-align: center;
 }
 
 .profile-pic {
@@ -83,6 +90,7 @@ section > *:not(h2):not(h3) {
   padding: 1.5rem;
   margin-bottom: 2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
 }
 
 .project img {
@@ -92,7 +100,7 @@ section > *:not(h2):not(h3) {
   border-radius: 6px;
 }
 
-/* Resume */
+/* Resume Button */
 .button {
   display: inline-block;
   margin-top: 1rem;
@@ -127,8 +135,9 @@ footer {
   padding: 1rem;
   margin-top: 3rem;
 }
+
+/* Experience Section */
 .experience {
-  text-align: left;
   margin-top: 2rem;
   padding: 1rem;
   background: #ffffff;
@@ -139,43 +148,36 @@ footer {
 .experience h3 {
   margin-bottom: 0.3rem;
   color: #0a192f;
+  text-align: center;
 }
 
 .date-range {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .experience ul {
   padding-left: 1.2rem;
+  margin-left: 0;
   margin-bottom: 2rem;
 }
 
 .experience li {
   margin-bottom: 0.5rem;
   list-style-type: disc;
+  text-align: left;
 }
 
-/* Reset list alignment inside resume, experience, skills sections */
-.experience,
-.experience ul,
-.experience li,
-.skills,
-.skills ul,
-.skills li {
-  text-align: center;
-  margin-left: 1.5rem;
-}
-
-/* Optional: Keep titles centered if you want */
-section h2,
-section h3 {
-  text-align: center;
-}
-
-.experience ul,
+/* Skills Section (same layout) */
 .skills ul {
-  padding-left: 1.2rem; /* or 1rem */
+  padding-left: 1.2rem;
   margin-left: 0;
+}
+
+.skills li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+  text-align: left;
 }
