@@ -76,6 +76,10 @@ section {
   text-align: left;
 }
 
+.skills {
+  text-align: left;
+}
+
 /* Project Cards */
 .project {
   background-color: white;
