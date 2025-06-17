@@ -72,6 +72,10 @@ section {
   color: #444;
 }
 
+.experience {
+  text-align: left;
+}
+
 /* Project Cards */
 .project {
   background-color: white;
