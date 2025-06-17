@@ -1,18 +1,23 @@
-/* Base styles */
+/* Global Styles */
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #e6f0ff, #ffffff);
+  background: #f4faff;
   color: #333;
-  line-height: 1.6;
 }
 
-/* Navigation bar */
+/* Navigation */
 nav {
+  position: sticky;
+  top: 0;
   background-color: #0a192f;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 nav ul {
@@ -27,79 +32,87 @@ nav ul {
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease-in-out;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav a:hover {
   color: #64ffda;
 }
 
-/* Header Landing Section */
-.landing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+/* Sections */
+section {
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
   text-align: center;
-  padding: 4rem 1rem 2rem;
-  background: linear-gradient(to bottom right, #cbe6ff, #f0f8ff);
+}
+
+/* Home / Landing */
+.landing {
+  background: linear-gradient(to bottom right, #e0f7ff, #f8ffff);
 }
 
 .profile-pic {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
   object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .landing h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin: 0.5rem 0;
 }
 
 .landing p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #444;
 }
 
-/* Section headers */
-section {
-  padding: 2rem 1.5rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.about h2,
-.projects h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-/* Project styling */
+/* Project Cards */
 .project {
   background-color: white;
+  border-radius: 10px;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .project img {
   width: 100%;
   max-width: 400px;
-  border-radius: 8px;
   margin-top: 1rem;
+  border-radius: 6px;
+}
+
+/* Resume */
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #0a192f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+}
+
+/* Contact */
+.contact a {
+  color: #0a192f;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -108,50 +121,5 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.95rem;
-}
-
-footer a {
-  color: #64ffda;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Animations */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-}
-
-.delay-1 {
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .landing h1 {
-    font-size: 1.6rem;
-  }
-
-  .landing p {
-    font-size: 1rem;
-  }
-
-  .project img {
-    width: 100%;
-  }
+  margin-top: 3rem;
 }
