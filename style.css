@@ -47,14 +47,6 @@ section {
   margin: auto;
   text-align: center;
 }
-/* Override centering for content-heavy sections */
-.about,
-.experience,
-.skills,
-.resume {
-  text-align: center;
-}
-
 
 /* Home / Landing */
 .landing {
@@ -176,4 +168,10 @@ footer {
 section h2,
 section h3 {
   text-align: center;
+}
+
+.experience ul,
+.skills ul {
+  padding-left: 1.2rem; /* or 1rem */
+  margin-left: 0;
 }
