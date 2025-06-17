@@ -47,6 +47,14 @@ section {
   margin: auto;
   text-align: center;
 }
+/* Override centering for content-heavy sections */
+.about,
+.experience,
+.skills,
+.resume {
+  text-align: left;
+}
+
 
 /* Home / Landing */
 .landing {
@@ -153,8 +161,19 @@ footer {
   list-style-type: disc;
 }
 
+/* Reset list alignment inside resume, experience, skills sections */
 .experience,
 .experience ul,
-.experience li {
+.experience li,
+.skills,
+.skills ul,
+.skills li {
   text-align: left;
+  margin-left: 1.5rem;
+}
+
+/* Optional: Keep titles centered if you want */
+section h2,
+section h3 {
+  text-align: center;
 }
