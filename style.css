@@ -11,6 +11,17 @@ body {
   color: #333;
 }
 
+.side-decal {
+  position: fixed;      /* Keeps it in place while scrolling */
+  top: 50%;             /* Vertically centered */
+  left: 0;              /* Left side of the screen (use right: 0 for right side) */
+  transform: translateY(-50%);
+  width: 120px;         /* Adjust size as needed */
+  z-index: 1000;        /* Make sure it stays on top */
+  pointer-events: none; /* So it doesn't block clicks */
+  opacity: 0.8;         /* Optional: make it slightly transparent */
+}
+
 /* Navigation */
 nav {
   position: sticky;
