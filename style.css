@@ -27,18 +27,6 @@ body {
   opacity: 0.85;         /* Optional: make it slightly transparent */
 }
 
-.side-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 35vw; /* Adjust width as needed */
-  height: 100vh;
-  z-index: 0;
-  background: 
-    linear-gradient(to right, rgba(255,255,255,0.8) 60%, rgba(255,255,255,0) 100%),
-    url('images/decal.png') center center/cover no-repeat;
-  pointer-events: none; /* So it doesn't block clicks */
-}
 
 /* Navigation */
 nav {
