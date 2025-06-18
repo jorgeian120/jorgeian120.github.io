@@ -20,7 +20,7 @@ body {
   height: auto;         /* Maintain aspect ratio */
   z-index: 1000;        /* Make sure it stays on top */
   pointer-events: none; /* So it doesn't block clicks */
-  opacity: 0.8;         /* Optional: make it slightly transparent */
+  opacity: 0.85;         /* Optional: make it slightly transparent */
 }
 
 /* Navigation */
