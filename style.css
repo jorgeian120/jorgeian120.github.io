@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
   scroll-behavior: smooth;
 }
@@ -11,24 +10,37 @@ body {
   color: #333;
   position: relative;
   z-index: 1;
-  border-left: 8px solid #222;   /* Change color/width as needed */
+  border-left: 8px solid #222;
   border-right: 8px solid #222;
 }
 
 .side-decal {
-  position: fixed;      /* Keeps it in place while scrolling */
-  top: 50%;             /* Vertically centered */
-  left: 0;              /* Left side of the screen (use right: 0 for right side) */
-  transform: translateY(-50%);
-  width: 120px;         /* Adjust size as needed */
-  height: auto;         /* Maintain aspect ratio */
-  z-index: 1000;        /* Make sure it stays on top */
-  pointer-events: none; /* So it doesn't block clicks */
-  opacity: 0.85;         /* Optional: make it slightly transparent */
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  max-width: 180px;
+  width: auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
 }
 
+.side-decal.right {
+  right: -8px;
+  left: auto;
+  transform: scaleX(-1) translateX(40px);
+  mask-image: linear-gradient(to left, transparent 0%, black 30%, black 100%);
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 30%, black 100%);
+}
 
-/* Navigation */
+.side-decal.left {
+  left: -8px;
+  right: auto;
+  transform: translateX(-40px);
+  mask-image: linear-gradient(to right, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -57,17 +69,15 @@ nav a:hover {
   color: #64ffda;
 }
 
-/* Sections */
 section {
-  padding: 4rem 1.5rem;
+  padding: 2rem 1.5rem;
   max-width: 900px;
   margin: auto;
   text-align: center;
 }
 
-/* Home / Landing */
 .landing {
-  background: linear-gradient(to bottom right, #e0f7ff, #f8ffff);
+  background: #0a192f;
 }
 
 .profile-pic {
@@ -76,17 +86,18 @@ section {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .landing h1 {
   font-size: 2.5rem;
   margin: 0.5rem 0;
+  color: #ffffff;
 }
 
 .landing p {
   font-size: 1.2rem;
-  color: #444;
+  color: #ffffff;
 }
 
 body::before,
@@ -100,17 +111,6 @@ body::after {
   opacity: 0.1;
 }
 
-body::before {
-  left: 0;
-  background: radial-gradient(circle at center, #64ffda 0%, transparent 80%);
-}
-
-body::after {
-  right: 0;
-  background: radial-gradient(circle at center, #64ffda 0%, transparent 80%);
-}
-
-
 .experience {
   text-align: left;
 }
@@ -119,7 +119,6 @@ body::after {
   text-align: left;
 }
 
-/* Project Cards */
 .project {
   background-color: white;
   border-radius: 10px;
@@ -135,7 +134,6 @@ body::after {
   border-radius: 6px;
 }
 
-/* Resume */
 .button {
   display: inline-block;
   margin-top: 1rem;
@@ -152,7 +150,6 @@ body::after {
   color: #0a192f;
 }
 
-/* Contact */
 .contact a {
   color: #0a192f;
   font-weight: bold;
@@ -164,11 +161,12 @@ body::after {
 
 footer {
   width: 100%;
+  box-sizing: border-box;
   background-color: #0a192f;
   color: white;
   text-align: center;
   padding: 1rem 0;
   margin-top: auto;
+  border: none;
+  z-index: 2000;
 }
-
-
