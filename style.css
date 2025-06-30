@@ -187,3 +187,20 @@ footer {
   border: none;
   z-index: 2000;
 }
+
+.row {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.column {
+  flex: 1;
+  min-width: 180px;
+}
+
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+  }
+}
