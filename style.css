@@ -199,8 +199,29 @@ footer {
   min-width: 180px;
 }
 
+.contact-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-col {
+  flex: 1;
+  min-width: 200px;
+}
+
 @media (max-width: 900px) {
   .row {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-row {
+    flex-direction: column;
+    text-align: left;
   }
 }
