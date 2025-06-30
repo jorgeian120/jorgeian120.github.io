@@ -120,12 +120,14 @@ body::after {
 }
 
 .skills ul {
-  columns: 2; /* Change to 3 for three columns */
-  -webkit-columns: 2;
-  -moz-columns: 2;
+  display: block;
+  columns: 3; /* Change to 2 for two columns */
+  -webkit-columns: 3;
+  -moz-columns: 3;
   column-gap: 2rem;
   padding-left: 1.5rem;
   margin: 0;
+  min-width: 400px;
 }
 
 .skills li {
