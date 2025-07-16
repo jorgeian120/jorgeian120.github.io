@@ -213,6 +213,13 @@ footer {
   min-width: 200px;
 }
 
+/* Remove bullet points from project details page lists */
+.projects ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
 @media (max-width: 900px) {
   .row {
     flex-direction: column;
